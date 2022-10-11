@@ -18,18 +18,20 @@
       </ion-header>
       
       <ion-item lines="full">
-      <ion-label position="stacked">DOB</ion-label>
       <ion-datetime
         presentation="date"
         prefer-wheel="true"
         required="true"
-      ></ion-datetime>
+      >
+        <span slot="title">DOB</span>
+    </ion-datetime>
     </ion-item>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
+/* eslint-disable */
 import { IonItem, IonLabel, IonDatetime, IonContent, IonHeader, IonList, IonPage, IonRefresher, IonRefresherContent, IonTitle, IonToolbar } from '@ionic/vue';
 import MessageListItem from '@/components/MessageListItem.vue';
 import { defineComponent } from 'vue';
