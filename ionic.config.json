@@ -1,0 +1,7 @@
+{
+  "name": "bugreport",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
