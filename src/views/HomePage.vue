@@ -17,15 +17,20 @@
         </ion-toolbar>
       </ion-header>
       
-      <ion-list>
-        <MessageListItem v-for="message in messages" :key="message.id" :message="message" />
-      </ion-list>
+      <ion-item lines="full">
+      <ion-label position="stacked">DOB</ion-label>
+      <ion-datetime
+        presentation="date"
+        prefer-wheel="true"
+        required="true"
+      ></ion-datetime>
+    </ion-item>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonContent, IonHeader, IonList, IonPage, IonRefresher, IonRefresherContent, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonItem, IonLabel, IonDatetime, IonContent, IonHeader, IonList, IonPage, IonRefresher, IonRefresherContent, IonTitle, IonToolbar } from '@ionic/vue';
 import MessageListItem from '@/components/MessageListItem.vue';
 import { defineComponent } from 'vue';
 import { getMessages } from '@/data/messages';
@@ -45,15 +50,18 @@ export default defineComponent({
     }
   },
   components: {
+    IonItem,
+    IonLabel,
+    IonDatetime,
     IonContent,
     IonHeader,
-    IonList,
+    //IonList,
     IonPage,
     IonRefresher,
     IonRefresherContent,
     IonTitle,
     IonToolbar,
-    MessageListItem
+    //MessageListItem
   },
 });
 </script>
